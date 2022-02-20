@@ -28,7 +28,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
-# Application definition
+# Application definition (default)
 DJANGO_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -38,11 +38,17 @@ DJANGO_APPS = [
     "django.contrib.staticfiles",
 ]
 
+# Apps from additional apps
+# In users directory, you can find RoomsConfig in apps.py
 PROJECT_APPS = [
     "users.apps.UsersConfig",
+    "rooms.apps.RoomsConfig",
+    "core.apps.CoreConfig",
 ]
 
-INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS
+THIRD_PARTY_APPS = []
+
+INSTALLED_APPS = DJANGO_APPS + PROJECT_APPS + THIRD_PARTY_APPS
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
