@@ -19,3 +19,10 @@ class RoomAdmin(admin.ModelAdmin):
     """Definition of Admin for Rooms"""
 
     pass
+
+
+@admin.register(models.Photo)
+class PhotoAdmin(admin.ModelAdmin):
+    """Definition of Admin for Photos"""
+
+    pass
